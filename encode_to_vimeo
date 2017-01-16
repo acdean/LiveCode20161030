@@ -1,0 +1,3 @@
+# http://video.stackexchange.com/questions/15174/how-to-get-ffmpeg-output-the-same-quality-as-vimeo
+ffmpeg -i frame%05d.png -c:v libx264 -preset slower -crf 20 -c:a libfdk_aac -vbr 4 \
+-ac 2 -movflags +faststart output.mp4
